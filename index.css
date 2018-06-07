@@ -1,4 +1,284 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700');
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+    list-style: none;
+}
+.video_fondo{
+    min-width: 100%;
+    min-height: 720px;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+}
+header{
+    width: 100%;
+}
+article{
+    width: 100%;
+    height: 720px;
+}
+article p{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 50px;
+    position: absolute;
+    top: 250px;
+    left: 490px;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    color: white;
+}
+article h2{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 50px;
+    position: absolute;
+    top: 250px;
+    left: 634px;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    color: white;
+}
+article h3{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 25px;
+    position: absolute;
+    top: 347px;
+    left: 578px;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    color: white;
+}
+article p:last-child{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top: 401px;
+    left: 605px;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    color: white;
+}
+.active{
+    color: rgb(74, 74, 228);
+}
+.logo{
+    position: absolute;
+    left: 73px;
+    top: 15px;
+}
+.titulo{
+    font-family: 'Titillium Web', sans-serif;
+    position: absolute;
+    color: white;
+    left: 119px;
+    top: 25px;
+}
+.navegacion{
+    display: flex;
+    display: flex;
+    padding: 10px 75px 0 0;
+    justify-content: flex-end;
+}
+.navegacion ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+}
+.navegacionul li{
+    display: inline-block;
+}
+.navegacion ul li a{
+    margin: 0;
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+}
+.titulo_derecha{
+    font-weight: normal;
+}
+main section{
+    width: 100%;
+    color: #2c3e50;
+}
+main section .contenedor{
+    display: flex;
+    justify-content: flex-start;
+    padding: 40px 0 40px 15%;
+}
+main section .columnas{
+    width: 650px;
+    overflow: hidden;
+}
+main section .posters{
+    display: flex;
+    flex-direction: column;
+}
+main section div .post_1{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+main section .detalles{
+    padding: 0 20px;
+}
+main section.objetos ul{
+    margin-top: 10px;
+    border-top: 2px solid #17c0eb;
+}
+main section.objetos ul li{
+    cursor: pointer;
+    transition: .3s;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+main section .social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding: 10px;
+    background: #ecf0f1;
+}
+main section .social .icon{
+    display: flex;
+    align-items: center;
+}
+main section .social .next{
+    display: flex;
+    align-items: center;
+}
+main section .social a{
+    margin: 0 5px;
+    color: gray;
+    text-decoration: none;
+}
+main section .segundo{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+main section .segundo .title{
+    width: 620px;
+}
+main section .segundo .title h2{
+    font-weight: 400;
+}
+main section .segundo .descripcion{
+    width: 452.313px;
+}
+div{
+    display: block;
+}main section .contenedor:nth-child(2){
+    display: flex;
+    justify-content: flex-start;
+    padding: 40px 0 40px 15%;
+    background-color: rgba(235, 233, 233, 0.322);
+}
+main .galeria{
+    display: grid;
+    background: var(--secondary);
+    grid-template-columns: repeat(5,180px);
+    grid-template-rows: auto 180px 180px;
+    justify-content: center;
+    padding-bottom: 30px;
+    background-color: rgba(235, 233, 233, 0.322);
+}
+main .galeria h2{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    padding: 20px 0;
+}
+main .galeria .item{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+main .galeria .imagen{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+    z-index: -1;
+}
+main .galeria .mascara{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0);
+    transition: .5s;
+}
+main .galeria .mascara img{
+    width: 50px;
+    transform: scale(0);
+    opacity: 0;
+    transition-duration: .5s;
+    transition-delay: .3s;
+}
+main .galeria .item:hover .mascara{
+    background:rgba(1,14,26,.8);
+}
+main .galeria .item:hover .mascara img{
+    opacity: 1;
+    transform: scale(1);
+}
+main .galeria .item:hover .imagen{
+    transform:scale(1.1);
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(51, 51, 51);
+    padding: 100px 0px;
+}
+footer figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    padding: 40px 0px;
+    color: white;
+}
+footer figure img{
+    width: 70px;
+    margin-right: 20px;
+}
+footer figure span{
+    display: block;    
+}
+footer .redes img{
+    width: 25px;
+    cursor: pointer;
+    margin: 15px;
+}
+footer .copyrigth{
+    font-size: 13px;
+    margin-top: 30px;
+    color: white;
+}
+header nav ul li a:hover{
+    font-weight: 600;
+    color: #17c0eb;
+}
+header nav ul li a.active {
+    font-weight:700;
+    color:#17c0eb;
 }
